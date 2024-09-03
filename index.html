@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>management system</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CRUDS</h1>
+            <h3>Full product management system </h3>
+        </header>
+        <!-- -------------------- -->
+        <div class="inputs">
+            <h3 style="margin: 10PX;" class="mianheader">CREATE</h3>
+
+            <input type="text" placeholder="title" class="title">
+            <div class="priceCONTAINER">
+                <input onkeyup="getTotal()" type="number" placeholder="price" class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="tax" class="tax">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" class="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" class="discount">
+                <span class="total">total: </span>
+            </div>
+            <input type="number" placeholder="count" class="count">
+
+            <input type="text" placeholder="category" class="category">
+            <button class="create" onclick="creatElement()">create</button>
+
+        </div>
+        <!-- -------------------- -->
+        <hr style="margin-block: 18px;">
+        <div class="outputs">
+            <div class="searchc">
+                <h3 style="margin: 10PX;">SEARCH</h3>
+                <input type="text" placeholder="search" onkeyup="search(this.value)" class="searchFiled">
+                <div class="buttons">
+                    <button class="bytitle" id="title" onclick="getsearch(this.id)"> Search By title</button>
+                    <button class="bycategory" id="category" onclick="getsearch(this.id)">Search By category</button>
+                    <button class="d" onclick="deleteAll()">Delete All</button>
+                </div>
+            </div>
+            <div class="tabel">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="ID">ID</th>
+                            <th class="TITLE">TITLE</th>
+                            <th class="PRICE">PRICE</th>
+                            <th class="TAX">TAX</th>
+                            <th class="ADS">ADS</th>
+                            <th class="DISCOUNT">DISCOUNT</th>
+                            <th class="TOTAL">TOTAL</td>
+                                <th class="CATEGORY">CATEGORY</th>
+                                <th class="UPDATE">UPDATE</th>
+                                <th class="DELETE">DELETE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="assets/main.js/main.js ">
+    </script>
+</body>
+
+</html>
